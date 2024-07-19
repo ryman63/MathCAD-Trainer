@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="MathCAD_Trainer_0._01.MVVM.View.ReferenceView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:viewModel="clr-namespace:MathCAD_Trainer_0._01.MVVM.ViewModel"
+             xmlns:view="clr-namespace:MathCAD_Trainer_0._01.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" 
+             d:DesignWidth="800">
+
+    <UserControl.DataContext>
+        <viewModel:ReferenceViewModel/>
+    </UserControl.DataContext>
+
+    <ScrollViewer VerticalScrollBarVisibility="Hidden">
+
+        <StackPanel>
+
+            <TextBlock Text="Методический материал"
+                   Foreground="White"
+                   FontSize="28"
+                   HorizontalAlignment="Left"
+                   Margin="0,0,0,20"
+            />
+
+               
+
+        </StackPanel>
+
+    </ScrollViewer>
+    
+    
+</UserControl>

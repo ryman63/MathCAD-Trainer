@@ -1,0 +1,65 @@
+﻿<Application x:Class="MathCAD_Trainer_0._01.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MathCAD_Trainer_0._01"
+             xmlns:viewModel="clr-namespace:MathCAD_Trainer_0._01.MVVM.ViewModel"
+             xmlns:view="clr-namespace:MathCAD_Trainer_0._01.MVVM.View"
+             xmlns:test="clr-namespace:MathCAD_Trainer_0._01.MVVM.View.Test"
+             StartupUri="MainWindow.xaml">
+    
+    
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+
+                <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
+                
+                <ResourceDictionary Source="Theme/TextBoxTheme.xaml"/>
+
+                <ResourceDictionary Source="Theme/LightTheme.xaml"/>
+
+                <ResourceDictionary Source="Assets/Icons/Icons.xaml"/>
+
+                <ResourceDictionary Source="Styles/MainStyle.xaml"/>
+
+                <ResourceDictionary Source="Theme/ComboBoxTheme.xaml"/>
+
+                <ResourceDictionary Source="Theme/ListBoxTheme.xaml"/>
+
+                <ResourceDictionary Source="Theme/RadioButtonTestingTheme.xaml"/>
+
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
+                <view:HomeView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:TestingViewModel}">
+                <view:TestingView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:ExitViewModel}">
+                <view:ExitView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:ReferenceViewModel}">
+                <view:ReferenceView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:TestViewModel_1}">
+                <test:TestView_1/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:TestViewModel_2}">
+                <test:TestView_2/>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type viewModel:SettingViewModel}">
+                <view:SettingView/>
+            </DataTemplate>
+
+        </ResourceDictionary>
+        
+    </Application.Resources>
+    
+</Application>

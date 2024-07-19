@@ -1,0 +1,102 @@
+﻿<UserControl x:Class="MathCAD_Trainer_0._01.MVVM.View.Test.TestView_1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MathCAD_Trainer_0._01.MVVM.View.Test"
+             mc:Ignorable="d">
+
+    <StackPanel Orientation="Vertical">
+
+        <TextBlock VerticalAlignment="Top"
+                       Text="Классическое определение вероятности и основные формулы комбинаторики"
+                       Foreground="White"
+                       FontSize="28"
+                       Margin="15"
+                       TextWrapping="Wrap"
+                    />
+
+        <TextBlock VerticalAlignment="Top"
+                       Foreground="White"
+                       FontSize="18"
+                       Margin="15,0"
+                       TextWrapping="Wrap"
+                       Text="     Классическая схема позволяет вычислять вероятности без проведения случайного эксперимента, основываясь лишь на свойстве симметрии возможных исходов испытания, так что нет оснований считать какой-либо из исходов более вероятным, чем другой.&#x0a;     При непосредственном подсчете вероятностей часто используют формулы комбинаторики. Простейшими из них являются перестановки, сочетания, размещения и разбиения.">
+
+        </TextBlock>
+
+        <StackPanel Orientation="Horizontal">
+
+            <TextBlock Margin="15,45,0,45"
+                               Text="12 / 4 = "
+                               Foreground="White"
+                               FontSize="56"
+                        />
+
+            <Border x:Name="num1Border"
+                                Width="70" 
+                                Height="70"
+                                Background="DarkGray"
+                                CornerRadius="10">
+
+                <TextBox x:Name="num1" 
+                                 FontSize="56" 
+                                 Text="" 
+                                 Background="Transparent"
+                                 BorderThickness="0"
+                                     Margin="1"
+                            />
+
+            </Border>
+
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal">
+
+            <TextBlock Margin="15,45,0,45"
+                               Text="2 * 18 = "
+                               Foreground="White"
+                               FontSize="56"
+                        />
+
+            <Border x:Name="num2Border"
+                                Width="70" 
+                                Height="70"
+                                Background="DarkGray"
+                                CornerRadius="10">
+
+                <TextBox x:Name="num2" 
+                                 FontSize="56" 
+                                 Text="" 
+                                 Background="Transparent"
+                                 BorderThickness="0"
+                                     Margin="1"
+                            />
+
+            </Border>
+
+        </StackPanel>
+
+        <TextBlock x:Name="resultTextBlock"
+                               Background="Transparent"
+                               Foreground="White"
+                               Visibility="Collapsed"
+                               FontSize="40"
+                               Margin="15,0"/>
+
+        <Button Background="DarkRed"
+                            x:Name="checkButton"
+                            Content="Проверить"
+                            Foreground="White"
+                            FontSize="40"
+                            Margin="15"
+                            BorderBrush="Red" Click="checkButton_Click"
+                            >  
+
+
+        </Button>
+
+    </StackPanel>
+
+</UserControl>
+

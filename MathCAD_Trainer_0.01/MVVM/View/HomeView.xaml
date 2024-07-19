@@ -1,0 +1,182 @@
+﻿<UserControl x:Class="MathCAD_Trainer_0._01.MVVM.View.HomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:viewModel="clr-namespace:MathCAD_Trainer_0._01.MVVM.ViewModel"
+             xmlns:view="clr-namespace:MathCAD_Trainer_0._01.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignWidth="900">
+
+    <UserControl.DataContext>
+        <viewModel:MainViewModel/>
+    </UserControl.DataContext>
+
+
+    <ScrollViewer VerticalScrollBarVisibility="Hidden">
+
+        <StackPanel HorizontalAlignment="Left">
+
+            <TextBlock Text="Тестирование"
+                   Foreground="White"
+                   FontSize="28"
+                   HorizontalAlignment="Left"
+                   Margin="0,0,0,20"
+            />
+
+            <StackPanel Orientation="Horizontal">
+
+                <Border Width="400" 
+                    Height="200">
+
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                            <GradientStop Color="#5bc3ff" Offset="0.0"/>
+                            <GradientStop Color="#3aa0ff" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+
+                    <Border.Clip>
+                        <RectangleGeometry RadiusX="10"
+                                       RadiusY="10"
+                                       Rect="0,0,400,200"/>
+                    </Border.Clip>
+
+                    <Grid>
+                        <StackPanel>
+
+                            <TextBlock Text="Основные основы&#x0a;в MathCAD"
+                                   Foreground="White"
+                                   FontSize="28"
+                                   Margin="20,10,10,0"
+                            />
+
+                            <TextBlock Text="Начни изучать прямо сейчас!"
+                                   Foreground="White"
+                                   FontSize="18"
+                                   Margin="20,10,10,0"
+                            />
+
+                            <Image Source="/Images/MathCAD/mathcad.png" 
+                               HorizontalAlignment="Right" 
+                               VerticalAlignment="Bottom" 
+                               Margin="0,-45,3,0" Width="120"
+                            />
+
+                        </StackPanel>
+
+
+                    </Grid>
+                </Border>
+
+                <Border Width="230" 
+                    Height="200"
+                    CornerRadius="10"
+                    Margin="15,0,0,0">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                            <GradientStop Color="#ffc554" Offset="0.0"/>
+                            <GradientStop Color="#ffb73a" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+
+                </Border>
+
+            </StackPanel>
+
+            <StackPanel>
+
+                <TextBlock Text="Полезные материалы"
+                   Foreground="White"
+                   FontSize="28"
+                   HorizontalAlignment="Left"
+                   Margin="0,0,0,20"
+            />
+
+                <StackPanel Orientation="Horizontal">
+
+                    <StackPanel.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="Margin" Value="15,0,0,0"/>
+                        </Style>
+                    </StackPanel.Resources>
+
+                    <Border x:Name="UsefulMaterialBorder_1"
+                        Width="150"
+                        Height="150"
+                        Background="#844eff"
+                        CornerRadius="10"
+                        Margin="0" MouseDown="UsefulMaterialBorder_1_MouseDown">
+
+                        <TextBlock Foreground="White"
+                               FontSize="18"
+                               TextWrapping="Wrap"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Top"
+                                   Margin="15 15 0 0"
+                               Text="Последние обновления"
+                        />
+
+                    </Border>
+
+                    <Border x:Name="UsefulMaterialBorder_2"
+                        Width="150"
+                        Height="150"
+                        Background="#4e99ff"
+                        CornerRadius="10" MouseDown="UsefulMaterialBorder_2_MouseDown">
+
+                        <TextBlock Foreground="White"
+                               FontSize="18"
+                               TextWrapping="Wrap"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Top"
+                                   Margin="15 15"
+                               Text="Для чего нужен MathCAD?"
+                        />
+
+                    </Border>
+
+                    <Border x:Name="UsefulMaterialBorder_3"
+                        Width="150"
+                        Height="150"
+                        Background="#4eff91"
+                        CornerRadius="10" MouseDown="UsefulMaterialBorder_3_MouseDown"/>
+
+                    <Border x:Name="UsefulMaterialBorder_4"
+                        Width="150"
+                        Height="150"
+                        Background="#ecff4e"
+                        CornerRadius="10" MouseDown="UsefulMaterialBorder_4_MouseDown"/>
+
+                </StackPanel>
+
+            </StackPanel>
+
+            <Border x:Name="textPanel"
+                HorizontalAlignment="Left"
+                Margin="0,15,0,0"
+                Background="#844eff"
+                CornerRadius="10"
+                Visibility="Hidden">
+
+                <TextBlock x:Name="usefulMaterialTextBlock"
+                       TextWrapping="Wrap"
+                       FontSize="18"
+                       Foreground="White"
+                       Margin="10"
+                       FontWeight="SemiBold"
+                       Width="Auto"
+                       Text="  ">
+
+                </TextBlock>
+
+            </Border>
+
+        </StackPanel>
+
+    </ScrollViewer>
+    
+
+</UserControl>
+
+    

@@ -1,0 +1,129 @@
+﻿<UserControl x:Class="MathCAD_Trainer_0._01.MVVM.View.TestingView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:viewModel="clr-namespace:MathCAD_Trainer_0._01.MVVM.ViewModel"
+             xmlns:view="clr-namespace:MathCAD_Trainer_0._01.MVVM.View" 
+             xmlns:test="clr-namespace:MathCAD_Trainer_0._01.MVVM.View.Test"
+             mc:Ignorable="d" 
+             d:DesignWidth="1380">
+
+    <UserControl.DataContext>
+        <viewModel:TestingViewModel/>
+    </UserControl.DataContext>
+
+    <Grid>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <ScrollViewer Grid.Column="0"
+                      VerticalScrollBarVisibility="Hidden">
+            
+            <StackPanel HorizontalAlignment="Left"
+                    Width="400">
+
+                <TextBlock VerticalAlignment="Top"
+                       Text="Лабораторные задания"
+                       Foreground="White"
+                       FontSize="28"
+                       Margin="5,15,5,0"
+                />
+
+                <ListBox Height="600"
+                         Background="Transparent"
+                         ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                         ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                         BorderThickness="0"
+                         ItemsSource="{Binding Tests}">
+
+                    <ListBox.Resources>
+                        <Style TargetType="{x:Type RadioButton}">
+                            <Setter Property="Width" Value="300"/>
+                            <Setter Property="Background" Value="DimGray"/>
+                        </Style>
+                    </ListBox.Resources>
+
+                    <RadioButton Content="1"
+                                 ContentStringFormat="Классическое определение вероятности и основные формулы комбинаторики"
+                                 IsChecked="True"
+                                 Command="{Binding OnClickBorder_1}"
+                                 Style="{StaticResource RadioButtonTestingTheme}"/>
+
+                    <RadioButton Content="2"
+                                 ContentStringFormat="Геометрическое определение вероятности"
+                                 Command="{Binding OnClickBorder_2}"
+                                 Style="{StaticResource RadioButtonTestingTheme}"/>
+
+                    <RadioButton Content="3"
+                                 ContentStringFormat="Формула Бренули"
+                                 Command="{Binding OnClickBorder_2}"
+                                 Style="{StaticResource RadioButtonTestingTheme}"/>
+
+                    <RadioButton Content="4"
+                                 ContentStringFormat="Одномерные случайные величины и их числовые характеристики"
+                                 Command="{Binding OnClickBorder_2}"
+                                 Style="{StaticResource RadioButtonTestingTheme}"/>
+
+                    <RadioButton Content="5"
+                                 ContentStringFormat="Двумерные случайные величины"
+                                 Command="{Binding OnClickBorder_2}"
+                                 Style="{StaticResource RadioButtonTestingTheme}"/>
+
+                    <RadioButton Content="6"
+                                 ContentStringFormat="Числовые характеристики двумерных случайных величин"
+                                 Command="{Binding OnClickBorder_2}"
+                                 Style="{StaticResource RadioButtonTestingTheme}"/>
+
+                    <RadioButton Content="7"
+                                 ContentStringFormat="Экспериментальный анализ одномерной случайной величины"
+                                 Command="{Binding OnClickBorder_2}"
+                                 Style="{StaticResource RadioButtonTestingTheme}"/>
+
+                    <RadioButton Content="8"
+                                 ContentStringFormat="Проверка гипотезы о нормальном законе распределения"
+                                 Command="{Binding OnClickBorder_2}"
+                                 Style="{StaticResource RadioButtonTestingTheme}"/>
+
+                    <RadioButton Content="9"
+                                 ContentStringFormat="Изучение линейной корреляционной связи между двумя случайными величинами"
+                                 Command="{Binding OnClickBorder_2}"
+                                 Style="{StaticResource RadioButtonTestingTheme}"/>
+
+                </ListBox>
+
+            </StackPanel>
+
+
+        </ScrollViewer>
+
+
+        <ScrollViewer Grid.Column="1"
+                      VerticalScrollBarVisibility="Hidden">
+
+
+
+            <Border Background="#272532"
+                CornerRadius="10"
+                Margin="15,0,15,0">
+
+                <ContentPresenter Content="{Binding CurrentView}"
+                                  HorizontalAlignment="Left"
+                                  Grid.Column="1"
+                                  Margin="10">
+                    
+                </ContentPresenter>
+
+            </Border>
+
+
+
+        </ScrollViewer>
+        
+
+    </Grid>
+    
+</UserControl>
